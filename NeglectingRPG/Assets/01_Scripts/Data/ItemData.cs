@@ -1,18 +1,15 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ItemData : MonoBehaviour
+public class ItemData
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public int uniqueId;
+    public ItemData_SO baseData;
 
-    // Update is called once per frame
-    void Update()
+    public ItemData(ItemData_SO so)
     {
-        
+        baseData = so;
+        uniqueId = so.code;
     }
 }

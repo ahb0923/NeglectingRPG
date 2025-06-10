@@ -368,6 +368,8 @@
 -analyzer:"C:/Program Files/Unity/Hub/Editor/2022.3.17f1/Editor/Data/Tools/Unity.SourceGenerators/Unity.SourceGenerators.dll"
 "Assets/01_Scripts/Data/ItemData.cs"
 "Assets/01_Scripts/Data/ItemData_SO.cs"
+"Assets/01_Scripts/Item/ConsumableItem.cs"
+"Assets/01_Scripts/Item/EquipableItem.cs"
 "Assets/01_Scripts/Manager/GameManager.cs"
 "Assets/01_Scripts/Manager/InventoryManager.cs"
 "Assets/01_Scripts/Manager/ItemManager.cs"
