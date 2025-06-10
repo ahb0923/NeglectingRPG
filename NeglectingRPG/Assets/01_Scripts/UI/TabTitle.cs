@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -13,13 +14,13 @@ public class TabTitle : MonoBehaviour
             buttons.Init();
     }
     
-    public void SetListener(System.Action<TabButton> action)
+    public void SetListener(Action<TabButton> action)
     {
         foreach (var button in tabButtons)
             button.SetListener(action);
     }
 
-    public void SetTab(ITEM_TYPE catecory)
+    public void SetTab(ITEM_CATEGORY catecory)
     {
         foreach (var button in tabButtons)
         {

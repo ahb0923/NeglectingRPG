@@ -8,11 +8,14 @@ public class UIManager : Singleton<UIManager>
     [SerializeField] private DragIcon dragIcon;
     [SerializeField] private Transform inventory;
     [SerializeField] private Transform statusBox;
-    [SerializeField] private Transform itemBox;
     [SerializeField] private Button inventoryButton;
     [SerializeField] private Button closeInventoryButton;
     [SerializeField] private Button itemBoxButton;
     [SerializeField] private Button statusBoxButton;
+
+
+    [SerializeField] public Transform itemBox; 
+    [SerializeField] public Transform itemTextBox;
 
     private void Start()
     {
@@ -22,7 +25,7 @@ public class UIManager : Singleton<UIManager>
         statusBoxButton.onClick.AddListener(ShowStatusBox);
 
         StartCoroutine(C_SettinInitTab());
-        //CloseInventory();
+        CloseInventory();
     }
 
     IEnumerator C_SettinInitTab()
@@ -47,6 +50,7 @@ public class UIManager : Singleton<UIManager>
 
         statusBox.gameObject.SetActive(true);
         itemBox.gameObject.SetActive(false);
+        itemTextBox.gameObject.SetActive(false);
         inventory.gameObject.SetActive(false);
     }
 

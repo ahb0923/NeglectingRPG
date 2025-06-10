@@ -39,7 +39,7 @@ public class ItemSlotPool : Singleton<ItemSlotPool>
         slot.transform.SetParent(poolParent);
         pool.Enqueue(slot);
     }
-    
+
     public void ReturnAll(List<ItemSlot> slotList)
     {
         foreach (var slot in slotList)

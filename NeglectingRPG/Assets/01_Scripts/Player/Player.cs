@@ -11,6 +11,9 @@ public enum PLAYER_STATE
 }
 public class Player : MonoBehaviour
 {
+    public PlayerStatHandler statHandler;
+    public PlayerController controller;
+
     // Start is called before the first frame update
     void Start()
     {

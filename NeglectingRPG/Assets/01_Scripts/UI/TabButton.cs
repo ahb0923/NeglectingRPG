@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -9,7 +10,7 @@ public class TabButton : MonoBehaviour
     [SerializeField] private Transform highlightImage;
     [SerializeField] private Button button;
 
-    public ITEM_TYPE type;
+    public ITEM_CATEGORY type;
 
     public void Init()
     {
@@ -25,7 +26,7 @@ public class TabButton : MonoBehaviour
         highlightImage.gameObject.SetActive(state);
     }
 
-    public void SetListener(System.Action<TabButton> action)
+    public void SetListener(Action<TabButton> action)
     {
         if (button != null)
             button.onClick.AddListener(() => { action(this); });
