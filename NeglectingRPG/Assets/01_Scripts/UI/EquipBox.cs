@@ -17,13 +17,15 @@ public class EquipBox : MonoBehaviour
         {
             if (!slot.CanEquip(item)) continue;
 
-            // 이미 장착 중이라면 기존 장비를 인벤토리로 되돌림
+            // 교체가 일어나는 경우
             if (slot.CurrentItem != null)
             {
+                // 기존 아이템 인벤토리로 복귀
                 InventoryManager.Instance.AddItem(slot.CurrentItem);
             }
 
-            slot.Init(item); // 새 장비 장착
+            // 새 아이템 장착
+            slot.Init(item);
             return true;
         }
 

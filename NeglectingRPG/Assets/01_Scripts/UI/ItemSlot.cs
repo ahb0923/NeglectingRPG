@@ -78,12 +78,6 @@ public class ItemSlot : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDrag
             Debug.Log($" 아이템 slot 이외 클릭 : {draggedSlot}");
             return;
         }
-        if (eventData.pointerDrag?.GetComponent<EquipSlot>() != null)
-            Debug.Log("장비 슬롯에서 드롭");
-        // 자기 자신 위치거나 엉뚱한곳에 떨궜거나
-
-        // 장비칸에 떨궜을 경우 장착 로직 호출
-        // 장비칸이 비었을경우 & 장비칸에 이미 아이템 장착중일 경우 분기
 
         SwapItems(draggedSlot);
         UIManager.Instance.itemTextBox.gameObject.SetActive(false);
@@ -96,6 +90,7 @@ public class ItemSlot : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDrag
         {
             Debug.Log($"장착: {CurrentItem.baseData.itemName}");
             // 장착 로직 호출
+           // UIManager.Instance.
         }
         // 좌클릭 시 (현재 기능 없음 추후 추가 예정)
         else if (eventData.button == PointerEventData.InputButton.Left)

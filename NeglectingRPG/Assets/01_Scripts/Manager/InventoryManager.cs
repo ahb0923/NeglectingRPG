@@ -55,6 +55,11 @@ public class InventoryManager : Singleton<InventoryManager>
         if (index < 0 || index >= slotList.Count) return;
         slotList[index] = null;
     }
+    public void RemoveItemById(int uniqueId)
+    {
+        int index = slotList.FindIndex(x => x != null && x.uniqueId == uniqueId);
+        if (index >= 0) slotList[index] = null;
+    }
 
     // 해당되는 카테고리의 아이템만 담은 리스트 리턴
     public List<ItemData> GetItemsByCategory(ITEM_CATEGORY category)

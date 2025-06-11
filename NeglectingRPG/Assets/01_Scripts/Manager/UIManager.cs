@@ -8,6 +8,7 @@ public class UIManager : Singleton<UIManager>
     [SerializeField] private DragIcon dragIcon;
     [SerializeField] private Transform inventory;
     [SerializeField] private Transform statusBox;
+    [SerializeField] private Transform equipBox;
     [SerializeField] private Button inventoryButton;
     [SerializeField] private Button closeInventoryButton;
     [SerializeField] private Button itemBoxButton;
@@ -16,6 +17,7 @@ public class UIManager : Singleton<UIManager>
 
     [SerializeField] public Transform itemBox; 
     [SerializeField] public Transform itemTextBox;
+    [SerializeField] public UIPlayerInfo playerInfo;
 
     private void Start()
     {
@@ -24,6 +26,7 @@ public class UIManager : Singleton<UIManager>
         itemBoxButton.onClick.AddListener(ShowItemBox);
         statusBoxButton.onClick.AddListener(ShowStatusBox);
 
+        playerInfo.Init();
         StartCoroutine(C_SettinInitTab());
         CloseInventory();
     }
