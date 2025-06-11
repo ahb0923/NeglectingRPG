@@ -11,7 +11,7 @@
 ![2](https://github.com/user-attachments/assets/e3d91271-872b-449e-aca9-46d2f7d1051f)
 
 
-3) Drag&Drop으로 장착가능(추후 우클릭으로도 장착가능하게 할 예정)
+3) Drag&Drop으로 장착가능(추후 우클릭으로도 장착가능하게 할 예정) ***장착 해제시에는 장비슬롯 우클릭으로 해제 가능합니다***
  
 ![3](https://github.com/user-attachments/assets/e2733d85-f37a-4860-b567-0b60391b3d0e)
 
