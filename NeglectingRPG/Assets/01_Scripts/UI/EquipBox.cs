@@ -6,7 +6,6 @@ public class EquipBox : MonoBehaviour
 {
     [SerializeField] private List<EquipSlot> equipSlot;
 
-    // Start is called before the first frame update
     public EquipSlot GetSlotByCategory(ITEM_CATEGORY category)
     {
         return equipSlot.Find(slot => slot.Category == category);

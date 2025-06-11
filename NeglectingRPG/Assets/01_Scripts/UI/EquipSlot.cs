@@ -62,10 +62,11 @@ public class EquipSlot : MonoBehaviour, IDropHandler, IPointerClickHandler, IPoi
                 UIManager.Instance.itemBox.GetComponent<ItemBox>().UpdateBox(ITEM_CATEGORY.ALL); // 인벤토리 새로고침
             }
 
-            // 장착(메소드로 따로 만들 것)
+            // 장착(메소드로 추후 따로 만들 것)
             CurrentItem = draggedSlot.CurrentItem;
             iconImage.sprite = CurrentItem.baseData.icon;
             iconImage.enabled = true;
+            UIManager.Instance.dummyAnim.SetTrigger("Equip");
             GameManager.Instance.player.statHandler.ApplyModifier(CurrentItem);
 
             // 인벤토리에서 제거

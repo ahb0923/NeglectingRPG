@@ -14,7 +14,7 @@ public class UIManager : Singleton<UIManager>
     [SerializeField] private Button itemBoxButton;
     [SerializeField] private Button statusBoxButton;
 
-
+    [SerializeField] public Animator dummyAnim;
     [SerializeField] public Transform itemBox; 
     [SerializeField] public Transform itemTextBox;
     [SerializeField] public UIPlayerInfo playerInfo;
@@ -27,6 +27,14 @@ public class UIManager : Singleton<UIManager>
         statusBoxButton.onClick.AddListener(ShowStatusBox);
 
         playerInfo.Init();
+
+        PlayerStatHandler statHandler = GameManager.Instance.player.statHandler;
+        if (statHandler != null)
+        {
+            statHandler.OnStatChanged += () => playerInfo.UpdateStats();
+        }
+
+
         StartCoroutine(C_SettinInitTab());
         CloseInventory();
     }
