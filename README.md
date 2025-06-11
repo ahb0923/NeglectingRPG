@@ -16,7 +16,7 @@
 ![3](https://github.com/user-attachments/assets/e2733d85-f37a-4860-b567-0b60391b3d0e)
 
 
-4) 해당 메소드를 통해 랜덤 아이템을 추가 획득가능합니다
+4) 초기에 테스트용 랜덤 10개의 아이템이 주어지며, 해당 메소드(InventoryManager 내부에 있습니다)를 통해 랜덤 아이템을 추가 획득가능합니다
    
 ![4](https://github.com/user-attachments/assets/3da9c32c-fe17-40c4-a662-e74ad6575752)
 
